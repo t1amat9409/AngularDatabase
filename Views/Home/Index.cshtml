@@ -1,0 +1,19 @@
+﻿<div class="row" ng-controller="peopleCtrl">
+    <h5>{{Title}}</h5>
+
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h5><span class="glyphicon glyphicon-user"></span> {{Menu}}</h5>
+            </div>
+            <div class="panel-body">
+                <h6><a href="#!view">View People</a></h6>
+                <h6><a href="#!add">Add Person</a></h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div ng-view></div>
+    </div>
+</div>
