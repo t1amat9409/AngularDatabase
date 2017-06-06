@@ -25,7 +25,7 @@ app.controller('peopleCtrl', ['$scope','$http', function ($scope,$http) {
 
     $scope.Save = function () {
         $http.post('/API/addPerson', $scope.Person).then(function () {
-            alert($scope.Person.Name + ' Saved!');
+            alert($scope.Person.Name + ' Saved to database!');
             $http.get('/API/getPeople').then(function (data) {
                 $scope.People = data;
                 
