@@ -9,6 +9,12 @@ app.controller('peopleCtrl', ['$scope','$http', function ($scope,$http) {
 
     $.get('/API/getPeople', null, function (data) {
         $("#names").html(null);
+        $scope.People = data;
+        /*
+        ** inside the #names element, place this :
+        ** <a href={{'/Pages/Details/'+x.ID}} ng-repeat="x in People">{{x.Name}}</a>
+        ** The remove the for(..) loop below, ;-)!!
+        */
         
         for (var i = 0; i < data.length; i++) {
             
